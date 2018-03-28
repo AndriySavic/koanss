@@ -49,3 +49,16 @@ class AboutArrayAssignment < Neo::Koan
     assert_equal "Roy", last_name
   end
 end
+
+#My
+
+ #призначення масиву
+
+def test_arrays
+  first_name, surname_name = ["Andriy", "Savish"]
+  assert_equal "Andriy", first_name
+  assert_equal "Savish", surname_name
+  first_name, surname_name = surname_name, first_name
+  assert_equal "Savish", first_name
+  assert_equal "Andriy", surname_name
+end

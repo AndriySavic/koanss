@@ -188,3 +188,24 @@ class AboutClasses < Neo::Koan
   end
 
 end
+
+
+
+#My
+
+class People 
+def name
+"ANDRIY"
+end
+
+def year
+"1998"
+end
+
+def test
+people = People.new
+assert_raise(NoMethodError) do
+people.year         
+end
+end
+end

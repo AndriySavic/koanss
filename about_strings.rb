@@ -196,3 +196,33 @@ assert_equal ["the", "rain", "in", "spain"], words
     assert_equal false, a.object_id == b.object_id
   end
 end
+
+#My
+
+#Порівняння
+  def test_2
+    a = "It was the best of times"
+    b = "It was the worst of times"
+    assert_equal false, a[11..14] == b[11..14]
+  end
+
+#My
+
+#Перевірка додавання в String
+
+  def test_strings 
+  a="Hello "
+  b="Men!"
+  c="Hello World!"
+  assert_equal a+b,c          
+  end 
+  
+  #My
+
+ def test_plus_concatenation_will_leave_the_original_strings_unmodified_2
+    hi = "Hello, "
+    there = "Worldddd!"
+    string=hi+there[0..4]
+    assert_equal "Hello, World", string
+    assert_equal 12, string.size
+  end

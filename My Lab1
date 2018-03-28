@@ -1,0 +1,164 @@
+ 
+  У about_strings.rb я добавив.
+
+ def test_plus_concatenation_will_leave_the_original_strings_unmodified_2
+    hi = "Hello, "
+    there = "Worldddd!"
+    string=hi+there[0..4]
+    assert_equal "Hello, World", string
+    assert_equal 12, string.size
+  end
+
+
+  def test_2
+    a = "It was the best of times"
+    b = "It was the worst of times"
+    assert_equal false, a[11..14] == b[11..14]
+  end
+
+
+
+
+  def test_strings    #Перевірка додавання в String
+  a="Hello "
+  b="Men!"
+  c="Hello World!"
+  assert_equal a+b,c          
+  end 
+
+
+
+
+  У about_array_assignment.rb я добавив
+
+
+  #призначення масиву
+
+def test_arrays
+  first_name, surname_name = ["Andriy", "Savish"]
+  assert_equal "Andriy", first_name
+  assert_equal "Savish", surname_name
+  first_name, surname_name = surname_name, first_name
+  assert_equal "Savish", first_name
+  assert_equal "Andriy", surname_name
+end
+
+
+
+about_control_statements.rb
+#Метод, що перевіряє, чи належить число а множині 0...100
+
+def triple_equal (a)  
+  digits = (0...100)
+  if a<=100 && a>=0 
+    digits === a
+  else  "Nepravylnyy nomer"
+  end
+end
+
+
+
+
+У about_message_passing.rb метод, який перевіряє, чи отримане число просте.
+
+  def prost?(a)
+    i=2
+    b=true
+    while i<a
+      if a%i==0
+        b=false
+      end
+      i=i+1
+    end
+    b
+  end
+
+  def test_prost
+    assert_equal true,prost?(7)
+    assert_equal false,prost?(16)
+end 
+
+
+
+
+
+   У about_classes.rb я добавив.
+
+
+#Створюємо новий клас із наслідуванням
+
+class People 
+def name
+"ANDRIY"
+end
+
+def year
+"1998"
+end
+
+def test
+people = People.new
+assert_raise(NoMethodError) do
+people.year         
+end
+end
+end
+
+
+
+
+У about_iteration.rb метод, який отримує масив і виводить число,
+рівне сумі парних елементів цього масиву, та метод із тестами.
+
+
+    def sum_par a
+    s=0
+    a.each do |item| 
+      if(item%2==0)
+        s+=item
+      end
+    end
+    s
+  end
+
+  def test_sum
+    x=[1,2,3,4,5,6,7,8]
+    y=[3,9,17]
+    z=[]
+    assert_equal 20,sum_par(x)
+    assert_equal 0,sum_par(y)
+    assert_equal 0,sum_par(z)
+end
+
+
+
+
+
+У about_asserts.rb добавив.
+
+#My
+  def test_not_increment
+    i=0
+    i++1
+    assert_equal 0,i
+    i+=1
+    assert_equal 1,i;
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

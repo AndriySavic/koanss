@@ -154,3 +154,15 @@ class AboutControlStatements < Neo::Koan
   end
 
 end
+
+
+
+#my 
+
+def triple_equal (a)  
+  digits = (0...100)
+  if a<=100 && a>=0 
+    digits === a
+  else  "Nepravylnyy nomer"
+  end
+end
